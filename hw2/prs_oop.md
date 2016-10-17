@@ -1,4 +1,4 @@
-# Class_ROR_Learning: HW2: Rock, Paper & Sissor
+# Class_ROR_Learning: HW2: OOO version for Rock, Paper & Sissor
 This is a simple demo for Rock, Paper, Sissor game
 Made on 2016/10/17 , by Atlas Huamg
 
