@@ -1,0 +1,236 @@
+Inspecting 1 file
+W
+
+Offenses:
+
+prs_oop.rb:19:3: C: Use only ascii symbols in comments.
+# 人類玩家的類別
+  ^^^^^^^
+prs_oop.rb:21:7: C: Do not prefix reader method names with get_.
+  def get_gesture
+      ^^^^^^^^^^^
+prs_oop.rb:24:5: C: Inconsistent indentation detected.
+    break if !['R', 'P', 'S'].include?(self.gesture = gets.chomp.upcase)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+prs_oop.rb:24:5: C: Favor unless over if for negative conditions.
+    break if !['R', 'P', 'S'].include?(self.gesture = gets.chomp.upcase)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+prs_oop.rb:24:15: C: Use %w or %W for an array of words.
+    break if !['R', 'P', 'S'].include?(self.gesture = gets.chomp.upcase)
+              ^^^^^^^^^^^^^^^
+prs_oop.rb:27:5: C: Redundant self detected.
+    self.gesture
+    ^^^^^^^^^^^^
+prs_oop.rb:31:3: C: Use only ascii symbols in comments.
+# 電腦的類別
+  ^^^^^
+prs_oop.rb:33:7: C: Do not prefix reader method names with get_.
+  def get_gesture
+      ^^^^^^^^^^^
+prs_oop.rb:34:20: C: Use %w or %W for an array of words.
+    self.gesture = ['R', 'P', 'S'].shuffle!.last
+                   ^^^^^^^^^^^^^^^
+prs_oop.rb:36:5: C: Redundant self detected.
+    self.gesture
+    ^^^^^^^^^^^^
+prs_oop.rb:40:1: C: Missing top-level class documentation comment.
+class RPS
+^^^^^
+prs_oop.rb:41:3: C: Method has too many lines. [12/10]
+  def initialize ...
+  ^^^^^^^^^^^^^^
+prs_oop.rb:42:21: C: Unnecessary spacing detected.
+    @number_of_round  = 0
+                    ^
+prs_oop.rb:42:23: C: Operator = should be surrounded by a single space.
+    @number_of_round  = 0
+                      ^
+prs_oop.rb:49:5: C: Use 2 (not 4) spaces for indentation.
+        @number_of_round  += 1
+    ^^^^
+prs_oop.rb:49:25: C: Unnecessary spacing detected.
+        @number_of_round  += 1
+                        ^
+prs_oop.rb:49:27: C: Operator += should be surrounded by a single space.
+        @number_of_round  += 1
+                          ^^
+prs_oop.rb:54:9: W: Use Kernel#loop with break rather than begin/end/until(or while).
+    end while continue?
+        ^^^^^
+prs_oop.rb:56:3: C: Use empty lines between method definitions.
+  def intro
+  ^^^
+prs_oop.rb:57:5: C: Missing space after #.
+    #印出開場畫面，告訴玩家遊戲規則
+    ^^^^^^^^^^^^^^^^
+prs_oop.rb:57:6: C: Use only ascii symbols in comments.
+    #印出開場畫面，告訴玩家遊戲規則
+     ^^^^^^^^^^^^^^^
+prs_oop.rb:64:6: C: Unnecessary spacing detected.
+  def  input_user_name
+     ^
+prs_oop.rb:67:5: C: Favor modifier if usage when having a single-line body. Another good alternative is the usage of control flow &&/||.
+    if ""==@user_name  
+    ^^
+prs_oop.rb:67:8: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    if ""==@user_name  
+       ^^
+prs_oop.rb:67:10: C: Surrounding space missing for operator ==.
+    if ""==@user_name  
+         ^^
+prs_oop.rb:67:22: C: Trailing whitespace detected.
+    if ""==@user_name  
+                     ^^
+prs_oop.rb:68:5: C: Use 2 (not 4) spaces for indentation.
+        @user_name= "Player"
+    ^^^^
+prs_oop.rb:68:19: C: Surrounding space missing for operator =.
+        @user_name= "Player"
+                  ^
+prs_oop.rb:68:21: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        @user_name= "Player"
+                    ^^^^^^^^
+prs_oop.rb:73:3: C: Cyclomatic complexity for decide is too high. [8/6]
+  def decide(ply, ai)
+  ^^^
+prs_oop.rb:73:3: C: Perceived complexity for decide is too high. [8/7]
+  def decide(ply, ai)
+  ^^^
+prs_oop.rb:74:5: C: Missing space after #.
+    #邏輯判斷式
+    ^^^^^^
+prs_oop.rb:74:6: C: Use only ascii symbols in comments.
+    #邏輯判斷式
+     ^^^^^
+prs_oop.rb:75:5: W: Useless assignment to variable - result.
+    result = -1  #default -1: lose
+    ^^^^^^
+prs_oop.rb:75:16: C: Unnecessary spacing detected.
+    result = -1  #default -1: lose
+               ^
+prs_oop.rb:75:18: C: Missing space after #.
+    result = -1  #default -1: lose
+                 ^^^^^^^^^^^^^^^^^
+prs_oop.rb:76:17: C: Trailing whitespace detected.
+    if ply == ai 
+                ^
+prs_oop.rb:77:5: C: Use 2 (not 4) spaces for indentation.
+        return result = 0 # tie case
+    ^^^^
+prs_oop.rb:77:16: W: Useless assignment to variable - result.
+        return result = 0 # tie case
+               ^^^^^^
+prs_oop.rb:79:5: C: Use a guard clause instead of wrapping the code inside a conditional expression.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+    ^^
+prs_oop.rb:79:12: C: Surrounding space missing for operator ==.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+           ^^
+prs_oop.rb:79:14: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+             ^^^
+prs_oop.rb:79:27: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                          ^^^
+prs_oop.rb:79:32: C: Operator || should be surrounded by a single space.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                               ^^
+prs_oop.rb:79:34: C: Unnecessary spacing detected.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                                 ^
+prs_oop.rb:79:40: C: Surrounding space missing for operator ==.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                                       ^^
+prs_oop.rb:79:42: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                                         ^^^
+prs_oop.rb:79:55: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                                                      ^^^
+prs_oop.rb:79:67: C: Surrounding space missing for operator ==.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                                                                  ^^
+prs_oop.rb:79:69: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                                                                    ^^^
+prs_oop.rb:79:81: C: Line is too long. [97/80]
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                                                                                ^^^^^^^^^^^^^^^^^
+prs_oop.rb:79:82: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                                                                                 ^^^
+prs_oop.rb:79:86: C: Unnecessary spacing detected.
+    if (ply=="R" && ai == "S") ||  (ply=="S" && ai == "P") || (ply=="P" && ai == "R")  # win case
+                                                                                     ^
+prs_oop.rb:80:5: C: Use 2 (not 4) spaces for indentation.
+        return result = 1
+    ^^^^
+prs_oop.rb:80:16: W: Useless assignment to variable - result.
+        return result = 1
+               ^^^^^^
+prs_oop.rb:84:7: C: Do not prefix reader method names with get_.
+  def get_player_gestures
+      ^^^^^^^^^^^^^^^^^^^
+prs_oop.rb:85:5: C: Missing space after #.
+    #取得玩家和電腦兩個物件的
+    ^^^^^^^^^^^^^
+prs_oop.rb:85:6: C: Use only ascii symbols in comments.
+    #取得玩家和電腦兩個物件的
+     ^^^^^^^^^^^^
+prs_oop.rb:87:30: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @computer = Computer.new("Computer")
+                             ^^^^^^^^^^
+prs_oop.rb:91:5: C: Missing space after #.
+    #判斷玩家是否要繼續下一輪
+    ^^^^^^^^^^^^^
+prs_oop.rb:91:6: C: Use only ascii symbols in comments.
+    #判斷玩家是否要繼續下一輪
+     ^^^^^^^^^^^^
+prs_oop.rb:93:7: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    !["N"].include?(gets.chomp.upcase)
+      ^^^
+prs_oop.rb:97:12: C: Operator = should be surrounded by a single space.
+    result =  "The final result is .........."
+           ^
+prs_oop.rb:97:13: C: Unnecessary spacing detected.
+    result =  "The final result is .........."
+            ^
+prs_oop.rb:97:15: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    result =  "The final result is .........."
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+prs_oop.rb:98:5: C: Missing space after #.
+    #印出結果
+    ^^^^^
+prs_oop.rb:98:6: C: Use only ascii symbols in comments.
+    #印出結果
+     ^^^^
+prs_oop.rb:99:5: C: Use the return of the conditional for variable assignment and comparison.
+    if 1== choice ...
+    ^^^^^^^^^^^^^
+prs_oop.rb:99:9: C: Surrounding space missing for operator ==.
+    if 1== choice
+        ^^
+prs_oop.rb:100:5: C: Use 2 (not 4) spaces for indentation.
+        result += 'You win!'
+    ^^^^
+prs_oop.rb:101:11: C: Use choice.zero? instead of 0 == choice.
+    elsif 0 == choice
+          ^^^^^^^^^^^
+prs_oop.rb:102:5: C: Use 2 (not 4) spaces for indentation.
+        result +=  'Tie Game.'
+    ^^^^
+prs_oop.rb:104:5: C: Use 2 (not 4) spaces for indentation.
+        result +=  'You lose!'
+    ^^^^
+prs_oop.rb:108:1: C: Extra empty line detected at class body end.
+prs_oop.rb:112:3: C: Use only ascii symbols in comments.
+# 主程式只要一行即可
+  ^^^^^^^^^
+prs_oop.rb:113:1: W: Useless assignment to variable - game.
+game = RPS.new
+^^^^
+prs_oop.rb:113:15: C: Final newline missing.
+game = RPS.new
+              
+
+1 file inspected, 77 offenses detected
