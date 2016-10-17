@@ -37,22 +37,27 @@ class Computer < Player
   end
 end
 
+# RPS class is used to init game
 class RPS
   def initialize
-    @number_of_round  = 0
-    @human = nil
-    @computer = nil
-
+    init_class_member
     intro
     input_user_name
     begin
-        @number_of_round  += 1
-        puts '\nRound #{@number_of_round} start!'
-        get_player_gestures
-        result = decide(@human.get_gesture, @computer.get_gesture)
-        show_message(result)
+      @number_of_round += 1
+      puts '\nRound #{@number_of_round} start!'
+      get_player_gestures
+      result = decide(@human.get_gesture, @computer.get_gesture)
+      show_message(result)
     end while continue?
   end
+
+  def init_class_member
+    @number_of_round = 0
+    @human = nil
+    @computer = nil
+  end
+
   def intro
     #印出開場畫面，告訴玩家遊戲規則
     puts '===== Rock, Paper, Sissor!! ===='
