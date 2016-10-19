@@ -1,5 +1,5 @@
 1. 請說明 Fixnum (整數) 和 Float (浮點數) 之間的差異<br/>
-    Answer:
+    Answer:  
     Fixnum 和 Fixnum 運算後還是 Fixnum
     Float 與 Fixnum or Float 運算會轉換成 Float
 
@@ -13,7 +13,7 @@
   puts str1 + str2
   puts "#{str1}#{str2}"
   ```
-    Answer:
+    Answer:  
     puts str1 + str2: 產生新的 string 放到新的記憶體 str3, 在 output 出來
     puts "#{str1}#{str2}": runtime output string 不佔用額外記憶體
     Ref: http://greyblake.com/blog/2012/09/02/ruby-perfomance-tricks/
@@ -21,20 +21,20 @@
 
 3. 請解釋 array 和 hash 的不同處 :
 
-    Answer:
+    Answer:  
     Array index 只能是 integer, 根據 index 取值
     Hash key-value pair, 根據 key 取值, key 可以是 arbitrary object type
 
 4. 請用一行程式碼從 [1, "a string", 3.14, [1,2,3,4]] 這個陣列找出所有非字串的值:
 
-    Answer:
+    Answer:  
     ```ruby
     [1, "a string", 3.14, [1,2,3,4]].reject {|x| (x.is_a? String)}
     ```
 
 5. 請用一行程式碼把一個內容為整數 1 到 100 的陣列裡所有的值加上 2
 
-    Answer:
+    Answer:  
     ```ruby
     (1..100).to_a.map {|x| x+=2}
     ```
@@ -44,7 +44,7 @@
   [1, 2, 3, 3].uniq!
   ```
   
-    Answer:
+    Answer:  
     這個 case 結果是一樣的 [1,2,3]
     但 uniq 會new新的 array 而且裡面的 element 是沒有重複的
     但 uniq! 會對同一個 array增減
@@ -52,7 +52,7 @@
 
 7. 請列出兩種產出亂數的方法
 
-    Answer:
+    Answer:  
     ```ruby
     a. Random.rand(1..10)
     b. (1..100).to_a.sample
@@ -65,7 +65,7 @@
   ```
   會執行出什麼結果？ 請試試不用 irb 算出結果
   
-    Answer:
+    Answer:  
     ```ruby
     = ((false) && (true) || true)
     = true
@@ -73,7 +73,7 @@
 
 9. 請問 binding.pry 是什麼？ 要如何使用它？
 
-    Answer:
+    Answer:  
     類似break point, 可先安裝 pry 這個 gem, 讓程式在 runtime 的時候可以monitor variable值, 幫助除錯
 
 10. 下面的一段程式碼，請嘗試用其他方法把 if...else...end 簡化成一行
