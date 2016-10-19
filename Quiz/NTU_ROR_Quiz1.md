@@ -1,6 +1,6 @@
 1. 請說明 Fixnum (整數) 和 Float (浮點數) 之間的差異
 Answer:
-: Fixnum 和 Fixnum 運算後還是 Fixnum
+Fixnum 和 Fixnum 運算後還是 Fixnum
 Float 與 Fixnum or Float 運算會轉換成 Float
 
 2. 今天有兩個字串：
