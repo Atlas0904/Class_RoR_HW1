@@ -31,6 +31,9 @@
     ```ruby
     [1, "a string", 3.14, [1,2,3,4]].reject {|x| (x.is_a? String)}
     ```
+    Teacher:
+    [1, "a string", 3.14, [1,2,3,4]].select {|x| x.class != String}
+
 
 5. 請用一行程式碼把一個內容為整數 1 到 100 的陣列裡所有的值加上 2
 
