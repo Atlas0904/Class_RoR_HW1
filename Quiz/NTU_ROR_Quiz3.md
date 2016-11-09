@@ -58,10 +58,10 @@ class AddMemberTable < ActiveRecord::Migration
 end
 ```
 
-8. 請解釋什麼是 ActiveRecord?  
+8. 請解釋什麼是 ActiveRecord?    
 Ans: 翻譯官的腳色, 用來串接以方便使用者即使不知道Database語法 也可以對資料庫做 CRUD 的command
 
-9. 若今天需要為 ```Project``` 和 ```Issue``` 這兩個 Model 建立一對多的關係，請寫出實作上所需要的 migration 和 model 檔案  
+9. 若今天需要為 ```Project``` 和 ```Issue``` 這兩個 Model 建立一對多的關係，請寫出實作上所需要的 migration 和 model 檔案    
 Ans:
 ```ruby
 $rails g migration add_projects_table
