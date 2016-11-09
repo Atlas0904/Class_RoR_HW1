@@ -166,3 +166,5 @@ Ans:
   end
   ```
    
+Note: 
+Further reference: http://rails.ruby.tw/association_basics.html#has-many-through-%E9%97%9C%E8%81%AF
