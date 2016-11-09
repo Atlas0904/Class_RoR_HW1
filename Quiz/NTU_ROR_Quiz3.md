@@ -43,22 +43,22 @@ Ans:
         **description (text)**,
         **members (integer)**
     * 請寫出一個能產生出以上需求的 migration 檔
-        
+    
 Ans:    
-```ruby
-class AddMemberTable < ActiveRecord::Migration
-  def change
-    create_table :group do |t|
-      t.string  :name
-      t.text    :description
-      t.integer :members
+  ```ruby
+  class AddMemberTable < ActiveRecord::Migration
+    def change
+      create_table :group do |t|
+        t.string  :name
+        t.text    :description
+        t.integer :members
 
-      t.timestamp
+        t.timestamp
+      end
     end
   end
-end
-```
-    
+  ```
+
 8. 請解釋什麼是 ActiveRecord?    
 Ans:   
 翻譯官的腳色, 用來串接以方便使用者即使不知道Database語法 也可以對資料庫做 CRUD 的command
