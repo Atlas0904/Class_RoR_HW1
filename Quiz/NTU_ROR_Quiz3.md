@@ -26,8 +26,17 @@ Ans:
     resources :users
     ```
 Ans:    
-http://localhost:3000/users/
-
+Example: http://localhost:3000/users/ also format below
+  ```ruby
+    # get 'users' => 'users#index'
+    # post 'users' => 'users#create'
+    # get 'users' => 'users#new', as: :new_user
+    # get 'user/:id/edit' => 'user#edit', as: :edit_user
+    # get 'users/:id' => 'users#show', as: :user
+    # put 'user/:id' => 'user#update'
+    # patch 'user/:id' => 'user#update'
+    # delete 'users/:id' => 'user#destroy'
+  ```
 5. 請解釋 model 檔案和 migration 檔案的差別  
 Ans:    
   model: 用來定義 Database class 間相互的關係 1-many, many-1, many-many
