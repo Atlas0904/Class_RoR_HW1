@@ -30,20 +30,20 @@ Ans:
   model: 用來定義 Database class 間相互的關係 1-many, many-1, many-many
   migration: migration 用來記錄每一筆資料庫的變更, 之後執行 rake db:migrate apply
 
-6. 若今天發現一個 migration 檔寫錯，請問我應該用什麼指令回復到上一個版本的 migration               
+6. 若今天發現一個 migration 檔寫錯，請問我應該用什麼指令回復到上一個版本的 migration    
 Ans:    
-  ```ruby
-  rake db:rollback
-  ```
+    ```ruby
+    rake db:rollback
+    ```
 
 7. 假設今天
     * 我要在資料庫裡產出一個叫 group 的資料表
-    * 裡面包括的欄位名稱和相對應的資料型別是： 
+    * 裡面包括的欄位名稱和相對應的資料型別是：  
         **name (string)**,
         **description (text)**,
-        **members (integer)**
-    * 請寫出一個能產生出以上需求的 migration 檔
-    
+        **members (integer)**    
+
+   請寫出一個能產生出以上需求的 migration 檔    
 Ans:    
   ```ruby
   class AddMemberTable < ActiveRecord::Migration
@@ -72,7 +72,7 @@ $rails g migration add_issues_table
 class AddProjectsTable < ActiveRecord::Migration
   def change
     create_table :projects do |t|
-      # data member
+      //data member
  
       t.timestamps
     end    
@@ -82,7 +82,7 @@ end
 class AddIssuesTable < ActiveRecord::Migration
   def change
     create_table :issues do |t|
-      # data member
+      //data member
  
       t.timestamps
     end    
@@ -136,14 +136,14 @@ Ans:
   end
   ```
 
-11. 延續第10題，如果需要讓一個叫 "Bob" 的使用者產生一個名字叫做 "Rails is Fun" 的社團，應該如何在 rails console 裡實作出來？
+11. 延續第10題，如果需要讓一個叫 "Bob" 的使用者產生一個名字叫做 "Rails is Fun" 的社團，應該如何在 rails console 裡實作出來？    
 Ans:    
 ```ruby
 bob = User.new(name: "Bob")
 rail = Group.new(name: "Rails is Fun")
 bob.group << rail
 ```
-12. 延續第11題，請寫一段程式碼確保使用者在建立新社團時社團名不可以是空白，而且不能超過50個字
+12. 延續第11題，請寫一段程式碼確保使用者在建立新社團時社團名不可以是空白，而且不能超過50個字    
 Ans:    
 ```ruby
 class Group < ActiveRecord::Base
