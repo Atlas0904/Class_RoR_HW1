@@ -143,6 +143,7 @@ Ans:
   rail = Group.new(name: "Rails is Fun")
   bob.group << rail
   ```
+
 12. 延續第11題，請寫一段程式碼確保使用者在建立新社團時社團名不可以是空白，而且不能超過50個字    
 Ans:    
   ```ruby
@@ -152,3 +153,4 @@ Ans:
     has_many :user
   end
   ```
+   
