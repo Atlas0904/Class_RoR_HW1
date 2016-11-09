@@ -65,36 +65,36 @@ Ans:
 
 9. 若今天需要為 ```Project``` 和 ```Issue``` 這兩個 Model 建立一對多的關係，請寫出實作上所需要的 migration 和 model 檔案    
 Ans:    
-```ruby
-$rails g migration add_projects_table
-$rails g migration add_issues_table
+  ```ruby
+  $rails g migration add_projects_table
+  $rails g migration add_issues_table
 
-class AddProjectsTable < ActiveRecord::Migration
-  def change
-    create_table :projects do |t|
-      //data member
- 
-      t.timestamps
-    end    
+  class AddProjectsTable < ActiveRecord::Migration
+    def change
+      create_table :projects do |t|
+        //data member
+   
+        t.timestamps
+      end    
+    end
   end
-end
 
-class AddIssuesTable < ActiveRecord::Migration
-  def change
-    create_table :issues do |t|
-      //data member
- 
-      t.timestamps
-    end    
+  class AddIssuesTable < ActiveRecord::Migration
+    def change
+      create_table :issues do |t|
+        //data member
+   
+        t.timestamps
+      end    
+    end
   end
-end
 
-$rake db:migrate
+  $rake db:migrate
 
-class Project < ActiveRecord::Base
-  has_many :issues
-end
-```
+  class Project < ActiveRecord::Base
+    has_many :issues
+  end
+  ```
 
 10. 若今天我有以下 model 檔：
 
@@ -138,17 +138,17 @@ Ans:
 
 11. 延續第10題，如果需要讓一個叫 "Bob" 的使用者產生一個名字叫做 "Rails is Fun" 的社團，應該如何在 rails console 裡實作出來？    
 Ans:    
-```ruby
-bob = User.new(name: "Bob")
-rail = Group.new(name: "Rails is Fun")
-bob.group << rail
-```
+  ```ruby
+  bob = User.new(name: "Bob")
+  rail = Group.new(name: "Rails is Fun")
+  bob.group << rail
+  ```
 12. 延續第11題，請寫一段程式碼確保使用者在建立新社團時社團名不可以是空白，而且不能超過50個字    
 Ans:    
-```ruby
-class Group < ActiveRecord::Base
-  validates :name, presence: true
-  validates :name, length: { maximum: 50 }
-  has_many :user
-end
-```
+  ```ruby
+  class Group < ActiveRecord::Base
+    validates :name, presence: true
+    validates :name, length: { maximum: 50 }
+    has_many :user
+  end
+  ```
