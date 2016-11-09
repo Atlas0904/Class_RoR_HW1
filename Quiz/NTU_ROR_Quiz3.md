@@ -135,14 +135,14 @@ Ans:
   ```
 
 11. 延續第10題，如果需要讓一個叫 "Bob" 的使用者產生一個名字叫做 "Rails is Fun" 的社團，應該如何在 rails console 裡實作出來？
-Ans:
+Ans:   
 ```ruby
 bob = User.new(name: "Bob")
 rail = Group.new(name: "Rails is Fun")
 bob.group << rail
 ```
 12. 延續第11題，請寫一段程式碼確保使用者在建立新社團時社團名不可以是空白，而且不能超過50個字
-Ans:
+Ans:    
 ```ruby
 class Group < ActiveRecord::Base
   validates :name, presence: true
