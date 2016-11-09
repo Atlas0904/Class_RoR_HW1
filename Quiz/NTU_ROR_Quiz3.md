@@ -1,9 +1,9 @@
 1. 請解釋 database.yml, routes.rb, 和 Gemifle 分別是什麼？ 他們分別在一個 Rails 專案裡的什麼位置？ 他們為什麼對一個 Rails 專案如此重要？  
 Ans:    
   ```
-  config/database.yml: 資料庫設定檔。 Rails 應用程式會與資料庫互動。這個檔案包含三個不同的部分，對應到三個 Rails 預設環境
-  config/routes.rb: 定義頁面路由的檔案，負責將瀏覽器送來的http request 解析，配送至對應的controller action方法中
-  ./Gemfile: Gemfile是我們創建的一個用於描述gem之間依賴的文件。gem是一堆Ruby代碼的集合,   可以將 project 會用到的 gem 定義在這邊
+  config/database.yml: 資料庫設定檔。Rails 應用程式會與資料庫互動。這個檔案包含三個不同的部分，對應到三個 Rails 預設環境   
+  config/routes.rb: 定義頁面路由的檔案，負責將瀏覽器送來的http request 解析，配送至對應的controller action方法中   
+  ./Gemfile: Gemfile是我們創建的一個用於描述gem之間依賴的文件。gem是一堆Ruby代碼的集合, 可以將 project 會用到的 gem 定義在這邊    
   Ref:http://charlene-blog.logdown.com/posts/711773-railsrouting-namespace
   ```
 
