@@ -30,8 +30,8 @@ Ans:
   model: 用來定義 Database class 間相互的關係 1-many, many-1, many-many
   migration: migration 用來記錄每一筆資料庫的變更, 之後執行 rake db:migrate apply
 
-6. 若今天發現一個 migration 檔寫錯，請問我應該用什麼指令回復到上一個版本的 migration？          
-Ans:  
+6. 若今天發現一個 migration 檔寫錯，請問我應該用什麼指令回復到上一個版本的 migration               
+Ans:    
   ```ruby
   rake db:rollback
   ```
@@ -42,7 +42,8 @@ Ans:
         **name (string)**,
         **description (text)**,
         **members (integer)**
-    * 請寫出一個能產生出以上需求的 migration 檔    
+    * 請寫出一個能產生出以上需求的 migration 檔
+        
 Ans:    
 ```ruby
 class AddMemberTable < ActiveRecord::Migration
@@ -57,7 +58,7 @@ class AddMemberTable < ActiveRecord::Migration
   end
 end
 ```
-
+    
 8. 請解釋什麼是 ActiveRecord?    
 Ans:   
 翻譯官的腳色, 用來串接以方便使用者即使不知道Database語法 也可以對資料庫做 CRUD 的command
